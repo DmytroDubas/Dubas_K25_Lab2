@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Schedule>
+  <Lesson Teacher="Kharnauh" Subject="C#" Auditorium="305" Group="K-27" Department="FICT" Faculty="FCSC" Day="Monday" Time="10:25" />
+  <Lesson Teacher="Nikichenko" Subject="Math Logic" Auditorium="201" Group="K-27" Department="CS" Faculty="FCSC" Day="Monday" Time="12:20" />
+  <Lesson Teacher="Zubenko" Subject="Databases" Auditorium="101" Group="K-25" Department="CS" Faculty="FCSC" Day="Tuesday" Time="08:30" />
+  <Lesson Teacher="Kharnauh" Subject="OOP" Auditorium="305" Group="K-25" Department="CS" Faculty="FCSC" Day="Tuesday" Time="10:25" />
+</Schedule>
