@@ -1,42 +1,40 @@
 ﻿namespace ScheduleApp
 {
-    partial class Form1
+  partial class Form1
+  {
+    /// <summary>
+    /// Required designer variable.
+    /// </summary>
+    private System.ComponentModel.IContainer components = null;
+
+    /// <summary>
+    /// Clean up any resources being used.
+    /// </summary>
+    /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+    protected override void Dispose(bool disposing)
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
+    if (disposing && (components != null))
+    {
+      components.Dispose();
+    }
+    base.Dispose(disposing);
+    }
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+    #region Windows Form Designer generated code
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
-        {
+    /// <summary>
+    /// Required method for Designer support - do not modify
+    /// the contents of this method with the code editor.
+    /// </summary>
+    private void InitializeComponent()
+    {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblSelectedFile = new System.Windows.Forms.Label();
+            this.btnSelectFile = new System.Windows.Forms.Button();
             this.rtbOutput = new System.Windows.Forms.RichTextBox();
             this.btnConvert = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.txtAuditorium = new System.Windows.Forms.TextBox();
-            this.txtGroup = new System.Windows.Forms.TextBox();
-            this.txtSubject = new System.Windows.Forms.TextBox();
-            this.txtTeacher = new System.Windows.Forms.TextBox();
             this.chkAuditorium = new System.Windows.Forms.CheckBox();
             this.chkGroup = new System.Windows.Forms.CheckBox();
             this.chkSubject = new System.Windows.Forms.CheckBox();
@@ -44,19 +42,25 @@
             this.rbDom = new System.Windows.Forms.RadioButton();
             this.rbLinq = new System.Windows.Forms.RadioButton();
             this.rbSax = new System.Windows.Forms.RadioButton();
+            this.cmbTeacher = new System.Windows.Forms.ComboBox();
+            this.cmbSubject = new System.Windows.Forms.ComboBox();
+            this.cmbGroup = new System.Windows.Forms.ComboBox();
+            this.cmbAuditorium = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmbAuditorium);
+            this.groupBox1.Controls.Add(this.cmbGroup);
+            this.groupBox1.Controls.Add(this.cmbSubject);
+            this.groupBox1.Controls.Add(this.cmbTeacher);
+            this.groupBox1.Controls.Add(this.lblSelectedFile);
+            this.groupBox1.Controls.Add(this.btnSelectFile);
             this.groupBox1.Controls.Add(this.rtbOutput);
             this.groupBox1.Controls.Add(this.btnConvert);
             this.groupBox1.Controls.Add(this.btnClear);
             this.groupBox1.Controls.Add(this.btnSearch);
-            this.groupBox1.Controls.Add(this.txtAuditorium);
-            this.groupBox1.Controls.Add(this.txtGroup);
-            this.groupBox1.Controls.Add(this.txtSubject);
-            this.groupBox1.Controls.Add(this.txtTeacher);
             this.groupBox1.Controls.Add(this.chkAuditorium);
             this.groupBox1.Controls.Add(this.chkGroup);
             this.groupBox1.Controls.Add(this.chkSubject);
@@ -70,6 +74,25 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Метод аналізу";
+            // 
+            // lblSelectedFile
+            // 
+            this.lblSelectedFile.AutoSize = true;
+            this.lblSelectedFile.Location = new System.Drawing.Point(153, 352);
+            this.lblSelectedFile.Name = "lblSelectedFile";
+            this.lblSelectedFile.Size = new System.Drawing.Size(196, 16);
+            this.lblSelectedFile.TabIndex = 17;
+            this.lblSelectedFile.Text = "Поточний файл: Schedule.xml";
+            // 
+            // btnSelectFile
+            // 
+            this.btnSelectFile.Location = new System.Drawing.Point(21, 330);
+            this.btnSelectFile.Name = "btnSelectFile";
+            this.btnSelectFile.Size = new System.Drawing.Size(116, 61);
+            this.btnSelectFile.TabIndex = 16;
+            this.btnSelectFile.Text = "Обрати файл розкладу";
+            this.btnSelectFile.UseVisualStyleBackColor = true;
+            this.btnSelectFile.Click += new System.EventHandler(this.btnSelectFile_Click);
             // 
             // rtbOutput
             // 
@@ -108,34 +131,6 @@
             this.btnSearch.Text = "Пошук";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // txtAuditorium
-            // 
-            this.txtAuditorium.Location = new System.Drawing.Point(132, 237);
-            this.txtAuditorium.Name = "txtAuditorium";
-            this.txtAuditorium.Size = new System.Drawing.Size(100, 22);
-            this.txtAuditorium.TabIndex = 11;
-            // 
-            // txtGroup
-            // 
-            this.txtGroup.Location = new System.Drawing.Point(132, 197);
-            this.txtGroup.Name = "txtGroup";
-            this.txtGroup.Size = new System.Drawing.Size(100, 22);
-            this.txtGroup.TabIndex = 10;
-            // 
-            // txtSubject
-            // 
-            this.txtSubject.Location = new System.Drawing.Point(132, 157);
-            this.txtSubject.Name = "txtSubject";
-            this.txtSubject.Size = new System.Drawing.Size(100, 22);
-            this.txtSubject.TabIndex = 9;
-            // 
-            // txtTeacher
-            // 
-            this.txtTeacher.Location = new System.Drawing.Point(133, 117);
-            this.txtTeacher.Name = "txtTeacher";
-            this.txtTeacher.Size = new System.Drawing.Size(100, 22);
-            this.txtTeacher.TabIndex = 8;
             // 
             // chkAuditorium
             // 
@@ -210,6 +205,42 @@
             this.rbSax.UseVisualStyleBackColor = true;
             this.rbSax.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
+            // cmbTeacher
+            // 
+            this.cmbTeacher.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTeacher.FormattingEnabled = true;
+            this.cmbTeacher.Location = new System.Drawing.Point(132, 117);
+            this.cmbTeacher.Name = "cmbTeacher";
+            this.cmbTeacher.Size = new System.Drawing.Size(101, 24);
+            this.cmbTeacher.TabIndex = 18;
+            // 
+            // cmbSubject
+            // 
+            this.cmbSubject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSubject.FormattingEnabled = true;
+            this.cmbSubject.Location = new System.Drawing.Point(132, 151);
+            this.cmbSubject.Name = "cmbSubject";
+            this.cmbSubject.Size = new System.Drawing.Size(101, 24);
+            this.cmbSubject.TabIndex = 19;
+            // 
+            // cmbGroup
+            // 
+            this.cmbGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbGroup.FormattingEnabled = true;
+            this.cmbGroup.Location = new System.Drawing.Point(132, 188);
+            this.cmbGroup.Name = "cmbGroup";
+            this.cmbGroup.Size = new System.Drawing.Size(101, 24);
+            this.cmbGroup.TabIndex = 20;
+            // 
+            // cmbAuditorium
+            // 
+            this.cmbAuditorium.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbAuditorium.FormattingEnabled = true;
+            this.cmbAuditorium.Location = new System.Drawing.Point(132, 225);
+            this.cmbAuditorium.Name = "cmbAuditorium";
+            this.cmbAuditorium.Size = new System.Drawing.Size(101, 24);
+            this.cmbAuditorium.TabIndex = 21;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -222,26 +253,28 @@
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
-        }
+    }
 
-        #endregion
+    #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton rbSax;
-        private System.Windows.Forms.RadioButton rbDom;
-        private System.Windows.Forms.RadioButton rbLinq;
-        private System.Windows.Forms.CheckBox chkAuditorium;
-        private System.Windows.Forms.CheckBox chkGroup;
-        private System.Windows.Forms.CheckBox chkSubject;
-        private System.Windows.Forms.CheckBox chkTeacher;
-        private System.Windows.Forms.TextBox txtTeacher;
-        private System.Windows.Forms.TextBox txtSubject;
-        private System.Windows.Forms.Button btnConvert;
-        private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox txtAuditorium;
-        private System.Windows.Forms.TextBox txtGroup;
-        private System.Windows.Forms.RichTextBox rtbOutput;
+    private System.Windows.Forms.GroupBox groupBox1;
+    private System.Windows.Forms.RadioButton rbSax;
+    private System.Windows.Forms.RadioButton rbDom;
+    private System.Windows.Forms.RadioButton rbLinq;
+    private System.Windows.Forms.CheckBox chkAuditorium;
+    private System.Windows.Forms.CheckBox chkGroup;
+    private System.Windows.Forms.CheckBox chkSubject;
+    private System.Windows.Forms.CheckBox chkTeacher;
+    private System.Windows.Forms.Button btnConvert;
+    private System.Windows.Forms.Button btnClear;
+    private System.Windows.Forms.Button btnSearch;
+    private System.Windows.Forms.RichTextBox rtbOutput;
+    private System.Windows.Forms.Button btnSelectFile;
+    private System.Windows.Forms.Label lblSelectedFile;
+        private System.Windows.Forms.ComboBox cmbTeacher;
+        private System.Windows.Forms.ComboBox cmbAuditorium;
+        private System.Windows.Forms.ComboBox cmbGroup;
+        private System.Windows.Forms.ComboBox cmbSubject;
     }
 }
 

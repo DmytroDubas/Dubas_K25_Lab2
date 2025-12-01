@@ -2,8 +2,8 @@
 
 namespace ScheduleApp
 {
-    public interface IAnalysisStrategy
-    {
-        List<Lesson> Analyze(Lesson template, string filePath);
-    }
+  public interface IAnalysisStrategy
+  {
+    List<Lesson> Analyze(Lesson template, string filePath);
+  }
 }
